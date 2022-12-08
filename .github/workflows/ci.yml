@@ -1,12 +1,11 @@
 name: ci
 
 on:
-  push:
   schedule:
-    - cron: "55 10,12,14,16,18,20,22 * * *"
-
-env:
-  TZ: Asia/Shanghai
+    - cron: "55 */1 * * *"
+  push:
+    branches:
+      - master
 
 jobs:
   autogreen:
